@@ -23,8 +23,6 @@ class PostController extends Controller
 
     public function edit($id)
     {
-        Auth::loginUsingId(1);
-
         $post = Post::findOrFail($id);
 
         if (Gate::denies('update-post', $post)) {
