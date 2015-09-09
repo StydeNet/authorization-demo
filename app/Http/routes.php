@@ -11,7 +11,7 @@
 |
 */
 
-Auth::loginUsingId(1);
+Auth::loginUsingId(2);
 
 Route::get('/', function () {
     return view('welcome');

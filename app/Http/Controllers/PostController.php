@@ -25,7 +25,7 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        if (Gate::denies('update-post', $post)) {
+        if (Gate::denies('update', $post)) {
             Alert::danger('No tienes permisos para editar este post');
             return redirect('posts');
         }
